@@ -8,18 +8,24 @@ import { InMemoryDataService } from './in-memory-data.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TreeTableComponent } from './tree-table/tree-table.component';
-import {TableModule} from 'primeng/table';     
+import {TableModule} from 'primeng/table';
+import {TreeTableModule} from 'primeng/treetable';
+// import {TreeNode} from 'primeng/api';
+import { TableComponent } from './table/table.component';     
 
 @NgModule({
   declarations: [
     AppComponent,
-    TreeTableComponent
+    TreeTableComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     TableModule,
+    TreeTableModule,
+    
 
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.

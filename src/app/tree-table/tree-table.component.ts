@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { tap } from 'rxjs/operators';
-import { Hero } from '../hero';
-import { HeroService } from '../hero.service';
+import { TreeNode } from '../datafamily';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-tree-table',
@@ -10,19 +10,19 @@ import { HeroService } from '../hero.service';
 })
 export class TreeTableComponent implements OnInit {
 
-  heroes: Hero[] = [];
+  data: TreeNode[] = [];
   
 
-  constructor(private heroService : HeroService) { }
+  constructor(private dataService : DataService) { }
 
   ngOnInit() {
-    this.getHeroes();
+    this.getData();
   }
   
-  getHeroes(): void {
-    this.heroService.getHeroes().pipe(tap(heros => console.log(heros)))
-    .subscribe((heroes: Hero[]) => {
-      this.heroes = heroes as Hero[];
+  getData(): void {
+    this.dataService.getData().pipe(tap(data => console.log(data)))
+    .subscribe((heroes: TreeNode[]) => {
+      this.data = heroes as TreeNode[];
     }
       )};
   
