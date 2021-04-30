@@ -7,10 +7,12 @@ import { InMemoryDataService } from './in-memory-data.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TreeTableComponent } from './tree-table/tree-table.component';
 import {TableModule} from 'primeng/table';
 import {TreeTableModule} from 'primeng/treetable';
-// import {TreeNode} from 'primeng/api';
+import {OrganizationChartModule} from 'primeng/organizationchart';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
+import { TreeTableComponent } from './tree-table/tree-table.component';
 import { TableComponent } from './table/table.component';     
 
 @NgModule({
@@ -25,6 +27,8 @@ import { TableComponent } from './table/table.component';
     HttpClientModule,
     TableModule,
     TreeTableModule,
+    OrganizationChartModule,
+    BrowserAnimationsModule,
     
 
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests

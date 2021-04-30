@@ -27,6 +27,7 @@ export class InMemoryDataService implements InMemoryDbService {
                 "size": "200mb",
                 "type": "Folder"
             },
+            label: 'Applications',
             "children": [
                 {
                     "data": {
@@ -34,13 +35,15 @@ export class InMemoryDataService implements InMemoryDbService {
                         "size": "25mb",
                         "type": "Folder"
                     },
+                    label: 'Angular',
                     "children": [
                         {
                             "data": {
                                 "name": "angular.app",
                                 "size": "10mb",
                                 "type": "Application"
-                            }
+                            },
+                            label: 'angular.app',
                         },
                         {
                             "data": {
