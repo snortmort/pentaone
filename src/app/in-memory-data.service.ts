@@ -50,14 +50,16 @@ export class InMemoryDataService implements InMemoryDbService {
                                 "name": "cli.app",
                                 "size": "10mb",
                                 "type": "Application"
-                            }
+                            },
+                            label: "cli.app",
                         },
                         {
                             "data": {
                                 "name": "mobile.app",
                                 "size": "5mb",
                                 "type": "Application"
-                            }
+                            },
+                            label: "mobile.app",
                         }
                     ]
                 },
@@ -66,14 +68,16 @@ export class InMemoryDataService implements InMemoryDbService {
                         "name": "editor.app",
                         "size": "25mb",
                         "type": "Application"
-                    }
+                    },
+                    label: "editor.app",
                 },
                 {
                     "data": {
                         "name": "settings.app",
                         "size": "50mb",
                         "type": "Application"
-                    }
+                    },
+                    label: "settings.app",
                 }
             ]
         },
@@ -83,20 +87,23 @@ export class InMemoryDataService implements InMemoryDbService {
                 "size": "20mb",
                 "type": "Folder"
             },
+            label: "Cloud",
             "children": [
                 {
                     "data": {
                         "name": "backup-1.zip",
                         "size": "10mb",
                         "type": "Zip"
-                    }
+                    },
+                    label: "backup-1.zip",
                 },
                 {
                     "data": {
                         "name": "backup-2.zip",
                         "size": "10mb",
                         "type": "Zip"
-                    }
+                    },
+                    label: "backup-2.zip",
                 }
             ]
         },
@@ -106,20 +113,23 @@ export class InMemoryDataService implements InMemoryDbService {
                 "size": "150kb",
                 "type": "Folder"
             },
+            label: "Desktop",
             "children": [
                 {
                     "data": {
                         "name": "note-meeting.txt",
                         "size": "50kb",
                         "type": "Text"
-                    }
+                    },
+                    label: "note-meeting.txt",
                 },
                 {
                     "data": {
                         "name": "note-todo.txt",
                         "size": "100kb",
                         "type": "Text"
-                    }
+                    },
+                    label: "note-todo.txt",
                 }
             ]
         },
@@ -129,6 +139,7 @@ export class InMemoryDataService implements InMemoryDbService {
                 "size": "75kb",
                 "type": "Folder"
             },
+            label: "Documents",
             "children": [
                 {
                     "data": {
@@ -136,20 +147,23 @@ export class InMemoryDataService implements InMemoryDbService {
                         "size": "55kb",
                         "type": "Folder"
                     },
+                    label: "Work",
                     "children": [
                         {
                             "data": {
                                 "name": "Expenses.doc",
                                 "size": "30kb",
                                 "type": "Document"
-                            }
+                            },
+                            label: "Expenses.doc",
                         },
                         {
                             "data": {
                                 "name": "Resume.doc",
                                 "size": "25kb",
                                 "type": "Resume"
-                            }
+                            },
+                            label: "Resume.doc",
                         }
                     ]
                 },
