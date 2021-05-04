@@ -10,6 +10,8 @@ import { AppComponent } from './app.component';
 import {TableModule} from 'primeng/table';
 import {TreeTableModule} from 'primeng/treetable';
 import {OrganizationChartModule} from 'primeng/organizationchart';
+import {TreeModule} from 'primeng/tree';
+import {ButtonModule} from 'primeng/button';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { TreeTableComponent } from './tree-table/tree-table.component';
@@ -29,6 +31,8 @@ import { TableComponent } from './table/table.component';
     TreeTableModule,
     OrganizationChartModule,
     BrowserAnimationsModule,
+    TreeModule,
+    ButtonModule,
     
 
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests

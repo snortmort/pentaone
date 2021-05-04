@@ -1,3 +1,10 @@
+<div style="margin-bottom: 1rem">
+    <button pButton type="button" label="Expand all" (click)="expandAll()" style="margin-right: .5rem"></button>
+    <button pButton type="button" label="Collapse all" (click)="collapseAll()"></button>
+</div>
+
+
+<h5>Tree table</h5>
 <p-treeTable [value]="data">
     <ng-template pTemplate="header">
         <tr>
@@ -20,6 +27,10 @@
 
 
 
-<h5>Basic</h5>
-<p>Hierarchical data with zero configuration.</p>
+<h5>Org chart</h5>
 <p-organizationChart [value]="data"></p-organizationChart>
+
+<h5>Tree horizontal</h5>
+<p-tree layout="horizontal" selectionMode="single"  [value]="data" [draggableNodes]="true" [droppableNodes]="true" draggableScope="self" droppableScope="self"></p-tree>
+<h5>Tree</h5>
+<p-tree  [value]="data" [draggableNodes]="true" [droppableNodes]="true" draggableScope="self" droppableScope="self"></p-tree>

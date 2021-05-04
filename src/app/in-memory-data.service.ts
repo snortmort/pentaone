@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
+import { TreeNode } from 'primeng/api';
 import { Hero } from './hero';
 
 @Injectable({
@@ -19,15 +20,23 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 19, name: 'Magma' },
       { id: 20, name: 'Tornado' }
     ]
-    const data = 
-    [
+    const data: TreeNode[] = 
+    [         {
+        "data": {
+            "name": "Folders",
+            "size": "200mb",
+            "type": "Folder"
+        },
+        
+        "children": [
+        
         {
             "data": {
                 "name": "Applications",
                 "size": "200mb",
                 "type": "Folder"
             },
-            label: 'Applications',
+            
             "children": [
                 {
                     "data": {
@@ -35,7 +44,7 @@ export class InMemoryDataService implements InMemoryDbService {
                         "size": "25mb",
                         "type": "Folder"
                     },
-                    label: 'Angular',
+                    
                     "children": [
                         {
                             "data": {
@@ -43,7 +52,7 @@ export class InMemoryDataService implements InMemoryDbService {
                                 "size": "10mb",
                                 "type": "Application"
                             },
-                            label: 'angular.app',
+                            
                         },
                         {
                             "data": {
@@ -51,7 +60,7 @@ export class InMemoryDataService implements InMemoryDbService {
                                 "size": "10mb",
                                 "type": "Application"
                             },
-                            label: "cli.app",
+                            
                         },
                         {
                             "data": {
@@ -59,7 +68,7 @@ export class InMemoryDataService implements InMemoryDbService {
                                 "size": "5mb",
                                 "type": "Application"
                             },
-                            label: "mobile.app",
+                            
                         }
                     ]
                 },
@@ -69,7 +78,7 @@ export class InMemoryDataService implements InMemoryDbService {
                         "size": "25mb",
                         "type": "Application"
                     },
-                    label: "editor.app",
+                    
                 },
                 {
                     "data": {
@@ -77,7 +86,7 @@ export class InMemoryDataService implements InMemoryDbService {
                         "size": "50mb",
                         "type": "Application"
                     },
-                    label: "settings.app",
+                    
                 }
             ]
         },
@@ -87,7 +96,7 @@ export class InMemoryDataService implements InMemoryDbService {
                 "size": "20mb",
                 "type": "Folder"
             },
-            label: "Cloud",
+            
             "children": [
                 {
                     "data": {
@@ -95,7 +104,7 @@ export class InMemoryDataService implements InMemoryDbService {
                         "size": "10mb",
                         "type": "Zip"
                     },
-                    label: "backup-1.zip",
+                    
                 },
                 {
                     "data": {
@@ -103,7 +112,7 @@ export class InMemoryDataService implements InMemoryDbService {
                         "size": "10mb",
                         "type": "Zip"
                     },
-                    label: "backup-2.zip",
+                    
                 }
             ]
         },
@@ -113,7 +122,7 @@ export class InMemoryDataService implements InMemoryDbService {
                 "size": "150kb",
                 "type": "Folder"
             },
-            label: "Desktop",
+            
             "children": [
                 {
                     "data": {
@@ -121,7 +130,7 @@ export class InMemoryDataService implements InMemoryDbService {
                         "size": "50kb",
                         "type": "Text"
                     },
-                    label: "note-meeting.txt",
+                    
                 },
                 {
                     "data": {
@@ -129,7 +138,7 @@ export class InMemoryDataService implements InMemoryDbService {
                         "size": "100kb",
                         "type": "Text"
                     },
-                    label: "note-todo.txt",
+                    
                 }
             ]
         },
@@ -347,6 +356,7 @@ export class InMemoryDataService implements InMemoryDbService {
             ]
         }
     ]
+    }]
 
     ;
     return {heroes, data};
